@@ -9,3 +9,33 @@ Unpack the compressed archive file, and then copy the oc binary to a directory o
 
 [user@host ~]$ sudo chmod +x /usr/local/bin/oc
 https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+Important
+Windows users must adapt line-breaking characters in multi-line commands.
+
+In PowerShell, use the backtick character (
+>> -p RHT_OCP4_DEV_PASSWORD RHT_OCP4_MASTER_API
+Note that PowerShell prints the >> prompt as a line-continuation marker.
+
+This course does not provide support for alternative Windows shells, such as the Windows cmd command interpreter.
+
+
+
+Important
+
+Windows users must adapt line-breaking characters in multi-line commands.
+
+
+
+In PowerShell, use the backtick character (`) to introduce a line break in a command. For example, to run the preceding command in Windows PowerShell, you must run it as follows:
+
+
+
+PS C:\Users\user> oc login -u RHT_OCP4_DEV_USER `
+
+>> -p RHT_OCP4_DEV_PASSWORD RHT_OCP4_MASTER_API
+
+Note that PowerShell prints the >> prompt as a line-continuation marker.
+
+
+
+This course does not provide support for alternative Windows shells, such as the Windows cmd command interpreter.
